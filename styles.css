@@ -48,12 +48,12 @@ header.scrolled {
   backdrop-filter: blur(10px);
 }
 
-.header-container {
+header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
   height: 70px;
-  position: relative;
 }
 
 header img {
@@ -72,12 +72,36 @@ header img {
   transition: var(--transition);
 }
 
-.logo:hover {
-  transform: rotate(-5deg);
-}
-
 .logo span {
   color: var(--primary);
+}
+
+/* Style for logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+/* Style for logo image */
+.logo-img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px; 
+}
+
+/* Style for the text next to logo */
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* Style for "Kids" span inside the text */
+.logo-text span {
+  color: var(--primary);
+  margin-left: 4px;
 }
 
 /* Hamburger Menu */
@@ -169,6 +193,10 @@ header img {
   
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .logo-text {
+    font-size: 1.6rem; /* Smaller font size for mobile */
   }
 }
 
