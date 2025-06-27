@@ -20,7 +20,7 @@ body {
   background-color: var(--light);
   color: var(--dark);
   line-height: 1.6;
-  padding-top: 70px; /* Space for fixed navbar */
+  padding-top: 70px;
 }
 
 .container {
@@ -54,6 +54,13 @@ header.scrolled {
   align-items: center;
   height: 70px;
   position: relative;
+}
+
+header img {
+  margin-top: 5px;
+  width: 80px;
+  height: auto;
+  object-fit: contain;
 }
 
 .logo {
@@ -119,28 +126,6 @@ header.scrolled {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
-}
-
-.cart-icon {
-  margin-left: 1rem;
-  position: relative;
-  font-size: 1.2rem;
-  color: var(--dark);
-}
-
-.cart-count {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background: var(--secondary);
-  color: var(--white);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
 }
 
 /* Mobile Menu */
@@ -244,7 +229,7 @@ header.scrolled {
 .image-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Keep as cover for hero images if needed */
 }
 
 /* ===== About Section ===== */
@@ -280,9 +265,55 @@ header.scrolled {
   color: var(--gray);
 }
 
+/* ===== Event Slideshow Styles ===== */
+/* Container for the slideshow */
+.slideshow-container {
+  max-width: 800px;
+  height: 400px; /* Fixed height for uniformity */
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  /* background-color: #f0f0f0; optional background color */
+}
+
+/* Each slide */
+.mySlides {
+  display: none; /* hide all slides by default */
+  width: 100%;
+  height: 100%; /* fill the container */
+}
+
+/* Image styling inside slides */
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* shows entire image without cropping */
+  border-radius: 10px;
+}
+
+/* Fade animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+
 /* ===== Products Section ===== */
 #products {
-  padding: 80px 0;
+  padding: 30px 0;
   background: var(--light);
 }
 
@@ -330,12 +361,12 @@ header.scrolled {
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
+  object-fit: contain;
+  /* Optional: add object-position if needed, e.g., object-position: center; */
 }
 
-.product-card:hover .product-image img {
-  transform: scale(1.05);
+.product-card:hover .quick-view {
+  opacity: 1;
 }
 
 .quick-view {
@@ -443,11 +474,18 @@ footer {
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  text-decoration: none;
 }
 
-.social-links a:hover {
-  background: var(--primary);
-  transform: translateY(-3px);
+/* Specific hover colors */
+.social-links a.facebook:hover {
+  color: #3b5998;
+}
+.social-links a.instagram:hover {
+  color: #e1306c;
+}
+.social-links a.whatsapp:hover {
+  color: #25D366;
 }
 
 .copyright {
@@ -495,18 +533,4 @@ footer {
     flex-direction: column;
     gap: 20px;
   }
-}
-
-/*collection part */
-.responsive-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-}
-
-.back-button {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #007BFF; /* Change to your preferred color */
 }
