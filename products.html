@@ -1,24 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Products - Bharat Rijhwani</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Add this for your favicon/logo -->
+  <link rel="icon" href="images/web-icon.jpeg" type="image/jpeg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header>
     <div class="container">
-      <a href="index.html" class="logo">Radhe Radhe<span>Kids</span></a>
+      <label for="menu-toggle" class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <img src="images/logo.jpeg" alt="logo">
+      <a href="#" class="logo">Radhe Radhe<span>Kids</span></a>
       <nav class="main-nav">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
-          <li><a href="cart.html">Cart</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>          
+          <li><a href="index.html#event">Event</a></li>
+          <li><a href="products.html" >Products</a></li> 
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -29,94 +39,84 @@
       <h2 class="section-title">Our Products</h2>
       <div class="products-grid">
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="1" data-product-name="Daily Fits" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product1.jpeg" alt="Kids T-Shirt" loading="lazy">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product6.jpeg" alt="Daily-Outfits" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Casual Fits</h3>
-            <p>₹500</p>
+            <h3>Trendy Jacket</h3>
+            <!-- Removed Price -->
+            <!-- Removed Button -->
           </div>
         </div>
         
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="2" data-product-name="Casual Fits" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product2.webp" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product1.jpeg" alt="Casual-Outfits" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Semi Formals</h3>
-            <p>₹600</p>
+            <h3>Casual Fits</h3>
           </div>
         </div>
         
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="3" data-product-name="Semi Formals" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product3.jpeg" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product2.webp" alt="Semi-Formal-Outfits" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Trendy Trads</h3>
-            <p>₹700</p>
+            <h3>Semi Formals Fits</h3>
           </div>
         </div>
 
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="4" data-product-name="Trendy Trads" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product4.jpeg" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product3.jpeg" alt="Traditional-Outfits" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Royal Looks</h3>
-            <p>₹800</p>
+            <h3>Trendy Trads</h3>
           </div>
         </div>
+
         <!-- Product 5 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="5" data-product-name="Royal Looks" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product5.jpeg" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product4.jpeg" alt="Royal-Outfit" loading="lazy" />
           </div>
           <div class="product-info">
             <h3>Royal Looks</h3>
-            <p>₹800</p>
           </div>
         </div>
+
         <!-- Product 6 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="6" data-product-name="Royal One Fits" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product6.jpeg" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product5.jpeg" alt="Royal-One" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Royal Looks</h3>
-            <p>₹800</p>
+            <h3>Royals One Fits</h3>
           </div>
         </div>
+
         <!-- Product 7 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="7" data-product-name="Royals Two Fits" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product7.webp" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product7.webp" alt="Royals-Two" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Royal Looks</h3>
-            <p>₹800</p>
+            <h3>Royal Two Fits</h3>
           </div>
         </div>
+
         <!-- Product 8 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="8" data-product-name="Royals Three Fits" data-product-price="500" data-product-image="images/product1.jpeg">
           <div class="product-image">
-            <img src="images/product8.webp" alt="Kids Jeans">
-            <button class="quick-view">Add to Cart</button>
+            <img src="images/product8.webp" alt="Royals-Three" loading="lazy" />
           </div>
           <div class="product-info">
-            <h3>Royal Looks</h3>
-            <p>₹800</p>
+            <h3>Royals Three Fits</h3>
           </div>
         </div>
       </div>
@@ -136,21 +136,7 @@
       <p class="copyright">© 2024 Bharat Rijhwani. All rights reserved.</p>
     </div>
   </footer>
-  
-<script>
-  const cart = [];
 
-  document.querySelectorAll('.quick-view').forEach(button => {
-    button.addEventListener('click', function() {
-      const productCard = this.closest('.product-card');
-      const productName = productCard.querySelector('h3').innerText;
-      const productPrice = productCard.querySelector('p').innerText;
-
-      cart.push({ name: productName, price: productPrice });
-      alert(`${productName} has been added to your cart!`);
-    });
-  });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
